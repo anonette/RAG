@@ -76,7 +76,12 @@ with st.sidebar:
                 st.write(url)
                 st.button(label='Remove', key=f"Remove {url}", on_click=remove_url, kwargs={'url_to_remove': url})
                 st.divider()
-                                
+    with st.container():
+        st.markdown('''
+                    project by denisa kera at [anonette.net](https://anonette.net)  
+                    code at [anonette/RAG.git](https://github.com/anonette/RAG.git)
+                    ''')
+                      
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
