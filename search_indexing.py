@@ -3,7 +3,6 @@ from langchain.document_loaders import PyPDFium2Loader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 import pypdfium2 as pdfium
-from constants import chunk_size, chunk_overlap, number_snippets_to_retrieve
 
 
 def download_and_index_pdf(urls: list[str]) -> FAISS:
@@ -25,6 +24,9 @@ def download_and_index_pdf(urls: list[str]) -> FAISS:
     all_pages = []
     for url in urls:
         loader = PyPDFium2Loader(url)
+        # PDF Chunking constants
+        chunk_size = 500
+        chunk_overlap = 50
         splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         pages = loader.load_and_split(splitter)
         pages = __update_metadata(pages, url)
@@ -34,6 +36,8 @@ def download_and_index_pdf(urls: list[str]) -> FAISS:
 
     return faiss_index
 
+
+number_snippets_to_retrieve = 3 # Number of snippets to be retrieved by FAISS
 
 def search_faiss_index(faiss_index: FAISS, query: str, top_k: int = number_snippets_to_retrieve) -> list:
     """
