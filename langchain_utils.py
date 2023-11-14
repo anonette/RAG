@@ -37,7 +37,7 @@ class SnippetsBufferWindowMemory(ConversationBufferWindowMemory):
         for snippet in similar_snippets:
             page_number = snippet.metadata['page']
             # Load into memory only new snippets
-            snippet_to_add = f"The following snippet was extracted from the following document: "
+            snippet_to_add = f""
             if snippet.metadata['title'] == snippet.metadata['source']:
                 snippet_to_add += f"{snippet.metadata['source']}\n"
             else:

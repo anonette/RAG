@@ -8,7 +8,7 @@ import re
 
 
 # Page title
-st.set_page_config(page_title='RAG2023')
+st.set_page_config(page_title='RAG2023',menu_items={'Get Help':"https://github.com/anonette/RAG.git",'About': "check denisa kera's work at https://anonette.net"} )
 st.title('RAG2023')
 st.subheader('A conversational assistant for the European Commission\'s White Paper on Artificial Intelligence')
 
@@ -32,6 +32,8 @@ if "messages" not in st.session_state:
 if 'urls' not in st.session_state:
     st.session_state.urls = []
 
+if 'active_urls' not in st.session_state:
+    st.session_state.active_urls = []
 
 def remove_url(url_to_remove):
     """
@@ -39,7 +41,18 @@ def remove_url(url_to_remove):
     """
     if url_to_remove in st.session_state.urls:
         st.session_state.urls.remove(url_to_remove)
- 
+
+def save_urls_to_file():
+    with open('urls.txt', 'w') as file:
+        for url in st.session_state.urls:
+            file.write(url + '\n')
+
+if 'urls' not in st.session_state:
+    st.session_state.urls = []
+    if os.path.exists('urls.txt'):
+        with open('urls.txt', 'r') as file:
+            st.session_state.urls = [line.strip() for line in file.readlines()]
+           
 with st.sidebar:
 
     openai_api_key = st.secrets["openai_api_key"] #st.text_input('Step 1 - OpenAI API Key:', type='password')
@@ -53,6 +66,7 @@ with st.sidebar:
         if add_url_button:
             if url not in st.session_state.urls:
                 st.session_state.urls.append(url)
+                save_urls_to_file() 
 
     # Display a container with the URLs added by the user so far
     with st.container():
