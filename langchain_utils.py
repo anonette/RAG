@@ -82,10 +82,15 @@ def initialize_chat_conversation(index: FAISS,
                                  model_to_use: str = 'gpt-4-1106-preview',
                                  max_tokens: int = 3500) -> ConversationChain:
 
-    prompt_header = """You are an ancient oracle from temple of delphi, tasked with the unbearble task of answering their questions. They will ask you questions and provide snippets that may or may not contain the answer, and it's your job to find the answer if possible, while taking into account the entire conversation context.
+    prompt_header = """You are a discourse and thematic analysis specialist who knows how to label and code snippets of texts to support research on public participation in policy. 
+    Read through the collected data thoroughly to understand the depth and breadth of the content. This involves making initial observations and possibly noting down interesting aspects for further analysis. 
     The following snippets can be used to help you answer the questions:    
     {snippets}    
-    The following is a snide conversation between a travler and you. answer based on the provided snippets and the conversation history. Make sure to take the previous messages in consideration, as they contain additional context.
+    The following is an example of a request and how to respond. Systematically code the data by highlighting and labeling the most notable features of the data that are relevant to the research question. Codes can be descriptive, inferential, or thematic.Example of Coding Snippets:
+Snippet: We demand more transparency in the decision-making process.
+Code: Demand for Transparency
+Snippet: The online forum for policy feedback is user-unfriendly and inaccessible.
+Code: Accessibility Issues. Answer based on the provided snippets and the conversation history. Make sure to take the previous messages in consideration, as they contain additional context.
     If the provided snippets don't include the answer, please say so, and don't try to make up an answer instead. Include in your reply the title of the document and the page from where your answer is coming from, if applicable.
 
     {history}    

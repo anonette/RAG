@@ -9,8 +9,8 @@ import re
 
 # Page title
 st.set_page_config(page_title='RAG2023',menu_items={'Get Help':"https://github.com/anonette/RAG.git",'About': "check denisa kera's work at https://anonette.net"} )
-st.title('RAG2023')
-st.subheader('A conversational assistant for the European Commission\'s White Paper on Artificial Intelligence')
+st.title('RAG for research')
+st.subheader('Discourse analysis assistant')
 
 # Initialize the faiss_index key in the session state. This can be used to avoid having to download and embed the same PDF
 # every time the user asks a question
@@ -55,7 +55,6 @@ if 'urls' not in st.session_state:
            
 with st.sidebar:
 
-    openai_api_key = st.secrets["openai_api_key"] #st.text_input('Step 1 - OpenAI API Key:', type='password')
     #https://commission.europa.eu/system/files/2020-02/commission-white-paper-artificial-intelligence-feb2020_en.pdf
     #https://commission.europa.eu/document/download/d2ec4039-c5be-423a-81ef-b9e44e79825b_en?filename=commission-white-paper-artificial-intelligence-feb2020_en.pdf
     
@@ -118,7 +117,9 @@ if query_text := st.chat_input("Your message"):
 
     with st.spinner('Querying LLM...'):
         response = conversation.predict(input=query_text, user_messages_history=user_messages_history)
-
+        # Append the response to a file 
+        with open('response.txt', 'a') as file:
+            file.write(response + '\n')
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(response)

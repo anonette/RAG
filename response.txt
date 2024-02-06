@@ -1,0 +1,42 @@
+Based on the provided snippets, here are five thematic categories, each with an associated snippet from the text:
+
+1. **Regulatory Concerns for Autonomous Vehicles (AV)**
+   - Snippet from Page 1: "I'm very concerned by the lack of regulation around AV software...it's negligent to expand before we have made sure that the software is safe."
+   - Theme: Concerns over insufficient regulation of AV software and its safety implications.
+
+2. **Infrastructure and Public Safety**
+   - Snippet from Page 1: "It is a matter of survival in the hills of Marin County where wildfires can happen quickly... Exposure to Wi-Fi puts my blood pressure up to dangerous levels."
+   - Theme: The importance of maintaining traditional infrastructure for public safety, especially in emergency scenarios, and health concerns related to wireless technology.
+
+3. **Public Perception and Trust in AV Technology**
+   - Snippet from Page 15: "I am very happy to report my reports have been excellent. Over the past two years, I urge you please to consider and driverless cars."
+   - Theme: Positive public perception and trust in AV technology based on personal experience.
+
+4. **Concerns about the Impact of AVs on Public Services and Environment**
+   - Snippet from Page 25: "These vehicles have been congesting traffic and exacerbating pollution and especially global warming for a decade."
+   - Theme: Concerns about AVs contributing to traffic congestion, pollution, and climate change, potentially affecting public transportation.
+
+5. **AVs as a Means of Social Inclusion and Accessibility**
+   - Snippet from Page 25: "When Waymo is permitted to provide driverless passenger service throughout our wonderful city, seniors who otherwise would be isolated in their homes will be able to safely travel."
+   - Theme: The potential of AVs to provide social inclusion and improve accessibility for marginalized communities, like LGBTQ seniors.
+
+Titles of the documents and page numbers are indicated for each snippet.
+Based on the provided snippets, I have identified references to experience and expertise within the testimonies and applied appropriate labels:
+
+1. **Snippet (Page 7)**: "My name is George an, I'm an orthopedic surgeon. I have been practicing in San Francisco and serving our citizens for over 30 years. I'm also an avid bicycle rider and an enthusiastic Waymo rider... as a physician and as a surgeon, I treat many patients who are, whose injuries are the consequences of distracted drivers, impaired drivers, angry drivers..."
+
+    **Code**: Expert Testimony - Medical Professional & Personal Experience as a Cyclist
+
+2. **Snippet (Page 1)**: "Hi, I'm Robert to, I'm a software engineer and I'm very concerned by the lack of regulation around AV software... We regulate autopilot software in airplanes... With AVs, we have none of these assurances."
+
+    **Code**: Expert Testimony - Software Engineering & Regulatory Concerns
+
+3. **Snippet (Page 1)**: "I am here to read a statement by Doctor Sandra Ross... Exposure to Wi-Fi puts my blood pressure up to dangerous levels. I cannot use any wireless Wi-Fi or smart technology without actually risking my life. My position on the County Health Commission also requires..."
+
+    **Code**: Expert Testimony - Health Professional with Personal Health Concerns
+
+4. **Snippet (Page 2)**: "My name is Matthew Sutter. I'm a cab driver in San Francisco. 31 years. I'm urging you to vote. No, I'm all about technology but this is not ready guys."
+
+    **Code**: Expert Testimony - Long-term Professional Driving Experience
+
+These examples demonstrate how individuals with relevant professional backgrounds or significant personal experience contribute their insights to the discourse on public participation in policy, particularly relating to autonomous vehicles (AVs) and technology in public spaces. Each testimony provides a unique perspective based on the individual's expertise or lived experience, which is valuable for policymakers to consider in their decision-making process.
